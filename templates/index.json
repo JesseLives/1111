@@ -1,0 +1,339 @@
+{
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "text": "🎉 FREE SHIPPING ON ORDERS OVER $35  |  SHOP NEW ARRIVALS →",
+            "link": "/collections/new-arrivals",
+            "color_scheme": "scheme-2"
+          }
+        }
+      },
+      "block_order": [
+        "announcement"
+      ],
+      "settings": {
+        "auto_rotate": false,
+        "change_screens": false
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "MADE FOR THE BOLD",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Premium phone cases designed to turn heads and protect your gear."
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "/collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "NEW ARRIVALS",
+            "button_link_2": "/collections/new-arrivals",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_height": "large",
+        "desktop_image_width": "full",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_below": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn-usp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping Over $35"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "title": "30-Day Easy Returns"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "title": "1-Year Warranty"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "title": "50,000+ Happy Customers"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "small",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-3",
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3"
+      ],
+      "settings": {
+        "title": "SHOP BY COLLECTION",
+        "heading_size": "h2",
+        "collections_to_show": 3,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "swipe_on_mobile": true,
+        "show_view_all": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "featured-collection-bestsellers": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BEST SELLERS",
+        "heading_size": "h2",
+        "description": "The styles everyone is loving right now.",
+        "show_description": true,
+        "collection": "",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image-with-text-story": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "MADE FOR THE BOLD",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We design premium phone cases for those who aren't afraid to stand out. Quality materials, bold designs, and protection you can trust.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Our Story",
+            "button_link": "/pages/about",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "non-overlapping",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "multicolumn-testimonials": {
+      "type": "multicolumn",
+      "blocks": {
+        "testimonial-1": {
+          "type": "column",
+          "settings": {
+            "title": "⭐⭐⭐⭐⭐",
+            "text": "\"Absolutely love my case! The quality is amazing and I get compliments everywhere I go.\"",
+            "link_label": "— Sarah, NY"
+          }
+        },
+        "testimonial-2": {
+          "type": "column",
+          "settings": {
+            "title": "⭐⭐⭐⭐⭐",
+            "text": "\"Best phone case I've ever owned. Dropped my phone multiple times and not a scratch!\"",
+            "link_label": "— Mike, CA"
+          }
+        },
+        "testimonial-3": {
+          "type": "column",
+          "settings": {
+            "title": "⭐⭐⭐⭐⭐",
+            "text": "\"Fast shipping, great quality, and the design is even better in person. Highly recommend!\"",
+            "link_label": "— Jessica, TX"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3"
+      ],
+      "settings": {
+        "title": "WHAT OUR CUSTOMERS SAY",
+        "heading_size": "h2",
+        "image_width": "small",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-3",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "logo-list-press": {
+      "type": "logo-list",
+      "blocks": {
+        "logo-1": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo-2": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo-3": {
+          "type": "logo",
+          "settings": {}
+        },
+        "logo-4": {
+          "type": "logo",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "logo-1",
+        "logo-2",
+        "logo-3",
+        "logo-4"
+      ],
+      "settings": {
+        "title": "AS SEEN IN",
+        "heading_size": "h2",
+        "logo_layout": "interlocked",
+        "mobile_layout": "slider",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "email-signup": {
+      "type": "email-signup-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN THE COMMUNITY",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Get 15% off your first order + early access to new drops."
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph"
+      ],
+      "settings": {
+        "section_height": "medium",
+        "color_scheme": "scheme-2",
+        "show_background_image": true,
+        "show_text_box": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "image-banner",
+    "multicolumn-usp",
+    "collection-list",
+    "featured-collection-bestsellers",
+    "image-with-text-story",
+    "multicolumn-testimonials",
+    "logo-list-press",
+    "email-signup"
+  ]
+}

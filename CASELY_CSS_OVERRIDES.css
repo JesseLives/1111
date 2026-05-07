@@ -1,0 +1,610 @@
+/* ================================================================
+   CASELY-STYLE OVERRIDES FOR SENSE THEME (Dawn-based, v15.x)
+   Store: shellify-5.myshopify.com
+   Target: getcasely.com aesthetic
+   ================================================================ */
+
+/* ---------------------------------------------------------------
+   1. KILL SENSE'S DEFAULT GRADIENTS — Replace with solid colors
+   --------------------------------------------------------------- */
+[style*="--gradient-base-background-1"],
+.color-scheme-1 {
+  background: var(--color-base-background-1) !important;
+}
+
+/* Remove any gradient blends between sections */
+.section-full-width::before,
+.section-full-width::after {
+  display: none !important;
+}
+
+/* Override Sense gradient overlays on banners */
+.banner__media::after {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.15) 40%,
+    transparent 70%
+  ) !important;
+}
+
+/* ---------------------------------------------------------------
+   2. OVERRIDE SENSE'S PILL BUTTONS → Casely-style bold buttons
+   --------------------------------------------------------------- */
+:root {
+  --buttons-radius: 4px !important;     /* Was 10px in Sense */
+  --buttons-radius-outset: 0px !important;
+  --card-corner-radius: 6px !important; /* Was 12px in Sense */
+  --badge-corner-radius: 3px !important; /* Was 20px in Sense */
+  --product-card-corner-radius: 6px !important;
+  --collection-card-corner-radius: 6px !important;
+  --blog-card-corner-radius: 6px !important;
+}
+
+.button, .btn,
+button.shopify-payment-button__button,
+.shopify-payment-button__button--unbranded {
+  border-radius: var(--buttons-radius) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Primary CTA button */
+.button--primary {
+  background-color: #E8303A !important;  /* ← Brand primary red */
+  border-color: #E8303A !important;
+  color: #FFFFFF !important;
+}
+.button--primary:hover {
+  background-color: #c42030 !important;
+  border-color: #c42030 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 48, 58, 0.3);
+}
+
+/* Secondary/Outline button */
+.button--secondary {
+  background-color: transparent !important;
+  border-color: #111111 !important;
+  color: #111111 !important;
+  border-width: 2px !important;
+}
+.button--secondary:hover {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+}
+
+/* ATC button on PDP */
+.product-form__submit {
+  width: 100% !important;
+  padding: 18px 24px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+}
+
+/* Dynamic checkout buttons */
+.shopify-payment-button__more-options {
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ---------------------------------------------------------------
+   3. TYPOGRAPHY — Override Sense's delicate defaults
+   --------------------------------------------------------------- */
+h1, h2, h3, h4, .h1, .h2, .h3,
+.card__heading, .banner__heading,
+.section__title {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
+/* Hero headline — BIG and heavy */
+.banner__heading {
+  font-size: clamp(2.8rem, 6vw, 5.5rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.0 !important;
+}
+
+/* Section headings */
+.featured-collection__title,
+.collection-list__title,
+.multicolumn__title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Body text - ensure readability */
+body, p, .body, .rte {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------------
+   4. PRODUCT CARDS
+   --------------------------------------------------------------- */
+
+/* Remove Sense's rounded card excess */
+.card, .card__inner {
+  border-radius: var(--card-corner-radius) !important;
+  border: none !important;
+  overflow: hidden;
+}
+
+/* Hover lift effect */
+.card-wrapper {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+}
+
+/* Card title */
+.card__heading {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Sale price — red */
+.price--on-sale .price-item--sale {
+  color: #E8303A !important;
+  font-weight: 700;
+}
+.price--on-sale .price-item--regular {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Full-unstyled-link hover */
+.full-unstyled-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------
+   5. BADGES — Override Sense's pill badges
+   --------------------------------------------------------------- */
+.badge {
+  border-radius: 3px !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 3px 8px !important;
+}
+.badge--on-sale, .badge--sale {
+  background-color: #E8303A !important;
+  color: #fff !important;
+}
+.badge--new {
+  background-color: #1a8c4e !important;
+  color: #fff !important;
+}
+.badge--sold-out {
+  background-color: #111111 !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------------------
+   6. ANNOUNCEMENT BAR
+   --------------------------------------------------------------- */
+.announcement-bar__message {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------
+   7. HEADER / NAVIGATION
+   --------------------------------------------------------------- */
+.header {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease;
+}
+.shopify-section-header-sticky .header--border-bottom {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+/* Nav links — bold uppercase */
+.header__menu-item > a,
+.header__menu-item > span {
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* SALE nav item highlight */
+.header__menu-item > a[href*="/collections/sale"] {
+  color: #E8303A !important;
+  font-weight: 700 !important;
+}
+
+/* Mega menu styling */
+.mega-menu__content {
+  border-radius: 6px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* ---------------------------------------------------------------
+   8. COLLECTION LIST CARDS (homepage collections grid)
+   --------------------------------------------------------------- */
+.collection-card .card__inner {
+  overflow: hidden;
+  border-radius: 6px;
+}
+.collection-card .card__media img {
+  transition: transform 0.4s ease;
+}
+.collection-card .card-wrapper:hover .card__media img {
+  transform: scale(1.04);
+}
+/* Dark gradient overlay for text legibility */
+.collection-card .card__inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%);
+  pointer-events: none;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------
+   9. PRESS LOGOS
+   --------------------------------------------------------------- */
+.logo-list__item img {
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: opacity 0.2s, filter 0.2s;
+}
+.logo-list__item img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   10. TRUST BADGES (product page)
+   --------------------------------------------------------------- */
+.trust-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 12px 0;
+}
+.trust-badges span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------
+   11. QUICK ADD BUTTON
+   --------------------------------------------------------------- */
+.quick-add__submit,
+.card__link.quick-add-modal__toggle {
+  background: #111 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-size: 12px !important;
+  border-radius: 4px !important;
+}
+.quick-add__submit:hover {
+  background: #E8303A !important;
+}
+
+/* ---------------------------------------------------------------
+   12. RATINGS
+   --------------------------------------------------------------- */
+.rating .icon-star,
+.review-stars .icon {
+  color: #FFB800 !important;
+}
+
+/* ---------------------------------------------------------------
+   13. INVENTORY WARNING
+   --------------------------------------------------------------- */
+.inventory-warning {
+  color: #E8303A;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------------------------------------------------------------
+   14. FREE SHIPPING BAR (cart)
+   --------------------------------------------------------------- */
+.free-shipping-bar {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.free-shipping-bar__track {
+  background: #333;
+  border-radius: 100px;
+  height: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.free-shipping-bar__fill {
+  background: #E8303A;
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.5s ease;
+}
+.free-shipping-bar--achieved {
+  color: #4caf50;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------
+   15. FOOTER
+   --------------------------------------------------------------- */
+.footer__heading {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  opacity: 0.5;
+  margin-bottom: 16px !important;
+}
+
+.footer__block summary {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* ---------------------------------------------------------------
+   16. MOBILE OVERRIDES
+   --------------------------------------------------------------- */
+@media (max-width: 749px) {
+  .banner__heading {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    line-height: 1.0 !important;
+  }
+
+  /* 2-column grid on mobile */
+  .grid--2-col-tablet-down {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Sticky ATC button on mobile PDP */
+  .product-form__submit {
+    position: sticky;
+    bottom: 16px;
+    z-index: 20;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Larger tap targets */
+  .button, .btn {
+    min-height: 48px;
+  }
+
+  /* Ensure product cards are 2-up on mobile */
+  .grid--peek {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   17. INPUT ZOOM FIX (iOS)
+   --------------------------------------------------------------- */
+input, select, textarea {
+  font-size: 16px !important; /* Prevents iOS auto-zoom on input focus */
+}
+
+/* ---------------------------------------------------------------
+   18. VARIANT PICKER PILLS OVERRIDE
+   --------------------------------------------------------------- */
+.product-form__input--swatch .product-form__input-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-form__input--swatch .product-form__input-item input[type="radio"] {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+.product-form__input--swatch .product-form__input-item label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-form__input--swatch .product-form__input-item input[type="radio"]:checked + label {
+  background: #111111;
+  border-color: #111111;
+  color: #FFFFFF;
+}
+
+.product-form__input--swatch .product-form__input-item label:hover {
+  border-color: #111111;
+}
+
+/* ---------------------------------------------------------------
+   19. CART DRAWER SPECIFIC
+   --------------------------------------------------------------- */
+.cart-drawer {
+  border-radius: 0;
+}
+
+.drawer__inner {
+  border-radius: 0;
+}
+
+.cart-item__image {
+  border-radius: 4px !important;
+}
+
+/* ---------------------------------------------------------------
+   20. ACCORDION / COLLAPSIBLE ROWS
+   --------------------------------------------------------------- */
+.accordion__summary {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.accordion__content {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------------
+   21. IMAGE WITH TEXT SECTION
+   --------------------------------------------------------------- */
+.image-with-text__content {
+  padding: 40px;
+}
+
+.image-with-text__heading {
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------------------------------------------------------------
+   22. MULTICOLUMN SECTION (USP Bar)
+   --------------------------------------------------------------- */
+.multicolumn-card__info {
+  text-align: center;
+}
+
+.multicolumn-card__heading {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ---------------------------------------------------------------
+   23. NEWSLETTER SECTION
+   --------------------------------------------------------------- */
+.newsletter-form__field-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-form__button {
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* ---------------------------------------------------------------
+   24. PAGE WIDTH OVERRIDE
+   --------------------------------------------------------------- */
+.page-width {
+  max-width: 1400px !important;
+}
+
+/* ---------------------------------------------------------------
+   25. SECTION SPACING
+   --------------------------------------------------------------- */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 750px) {
+  .section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/* ---------------------------------------------------------------
+   26. LOADING STATES
+   --------------------------------------------------------------- */
+.loading__spinner {
+  color: #E8303A !important;
+}
+
+/* ---------------------------------------------------------------
+   27. CART NOTIFICATION
+   --------------------------------------------------------------- */
+.cart-notification-wrapper {
+  border-radius: 6px !important;
+}
+
+.cart-notification-product__title {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------------------------------------------------------------
+   28. SEARCH & FILTERS
+   --------------------------------------------------------------- */
+.facets__summary {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 0.06em !important;
+}
+
+.active-filters__clear {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------------------------------------------------------------
+   29. PAGINATION
+   --------------------------------------------------------------- */
+.pagination__item {
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+}
+
+/* ---------------------------------------------------------------
+   30. SOCIAL ICONS
+   --------------------------------------------------------------- */
+.social-icons__link {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.social-icons__link:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
